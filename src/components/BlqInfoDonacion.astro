@@ -36,9 +36,13 @@ import Bagde from './Bagde.astro';
   </div>
 
 <style>
-  .suscribete{
-    text-align: center;
-    padding:1rem;
+  .suscribete {
+    margin-top:2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
   }
 /* Contenedor principal */
 .content-section {
@@ -117,6 +121,9 @@ import Bagde from './Bagde.astro';
 
   .section-text {
     font-size: 0.9rem;
+  }
+  .suscribete {
+    gap: 8px; /* Ajusta el espaciado */
   }
 }
 
