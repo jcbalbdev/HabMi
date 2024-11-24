@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BannerFull from '../components/BannerFull.astro';
+import Bagde from '../components/Bagde.astro';
+---
+
+<Layout title="Habitacion Michi">
+	<main>
+    <BannerFull/>
+    <div class="contact-info">
+      <h2 class="section-title">RON RON EN ADOPCION</h2>
+      <p class="section-text">Ron Ron es un gatito muy especial que está buscando una familia que lo ame y cuide. Fue rescatado de una cochera y, aunque ha pasado por momentos difíciles, es un compañero cariñoso y tranquilo.
+      </p>
+      <p class="section-text">
+        Ron Ron es positivo a VIF (Virus de Inmunodeficiencia Felina), lo que significa que necesita ciertos cuidados adicionales, pero puede llevar una vida feliz y plena con la atención adecuada.
+      </p>
+      <p class="section-text">
+        A pesar de su condición, lo único que realmente necesita es un hogar lleno de amor y comprensión.¡Dale la oportunidad de ser parte de tu familia!
+      </p>
+      <div class="suscribete">
+        <span class="card__badge">¡Adopta a Ron Ron!</span>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  /* Contenedor Principal (main) */
+  .main-content {
+    width: 100%;
+    
+  }
+  /* Contenedor principal */
+.contact-info {
+  padding: 0;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+}
+.section-title {
+  padding-top:1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  color: #1476d9 ;
+  
+  font-family: "Poppins", sans-serif;
+}
+/* Estilo del texto */
+.section-text {
+  font-size: 1rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.card__badge {
+    display: inline-block;
+    padding: 0.36rem 0.75rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-light);
+    background: #1476d9;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-info {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+  </style>

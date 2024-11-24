@@ -1,0 +1,256 @@
+<header >
+  <div class="container">
+    <a href="/" class="logo">
+      <img class="logo-image" src="/Logocms.svg" alt="logo">
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav class="nav-list">
+      <ul>
+        <li><a href="/" data-section="donaciones" class="inicio-link">DONACIONES</a></li>
+        <li><a href="/proyectos" data-section="proyectos" class="proyectos-link">PROYECTOS</a></li>
+        <li><a href="/rescatados" data-section="rescatados"  class="nosotros-link">RESCATADOS</a></li>
+        <li><a href="/adopciones" data-section="adopciones" class="contacto-link">ADOPCIONES</a></li>
+      </ul>
+    </nav>
+    <div class="menu-overlay"></div>
+  </div>
+</header>
+
+<!-- Estilos CSS -->
+<style>
+/* Estilos generales */
+header {
+  background-color: var(--color-ligth);
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.logo {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px; /* Ancho máximo en pantallas grandes */
+    width: 5vw; /* 20% del ancho de la pantalla en pantallas grandes */
+    
+}
+.logo-image {
+  width: 100%;
+    height: auto;
+    max-height: 55px; /* Limita la altura máxima para evitar que crezca demasiado */
+    object-fit: contain; /* Asegura que el logo se ajuste sin distorsión */
+    
+}
+
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .logo-container {
+      max-width: 150px; /* Limita el ancho máximo en tablets */
+      width: 6vw; /* 25% del ancho de la pantalla en tablets */
+    }
+
+    .logo-image {
+      max-height: 60px; /* Reduce un poco la altura máxima en tablets */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-container {
+      max-width: 100px; /* Limita el ancho máximo en móviles */
+      width: 7vw; /* 30% del ancho de la pantalla en móviles */
+    }
+
+    .logo-image {
+      max-height: 50px; /* Altura máxima aún menor en móviles */
+    }
+  }
+/* Menú lateral (off-canvas) para pantallas pequeñas */
+.nav-list {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Oculto inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: var(--color-ligth);
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 10px 0;
+}
+
+.nav-list a {
+  color: var(--color-grey);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px;
+  display: block;
+  transition: background-color 0.2s, color 0.2s;
+  position: relative;
+}
+
+/* Subrayado animado para enlaces activos o al pasar el mouse */
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Ubicación de la línea */
+  width: 0;
+  height: 2px; /* Grosor de la línea */
+  background-color: var(--color-grey); /* Color del subrayado */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Transición suave para animación */
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 100%; /* Expande la línea al ancho completo del enlace */
+  left: 0;
+}
+
+.nav-list a.active {
+  color: var(--color-ligth);
+}
+.nav-list .inicio-link.active{
+  color: #ff4617 ;
+}
+.nav-list .proyectos-link.active{
+  color: #fc8ca4;
+}
+.nav-list .nosotros-link.active{
+  color: #4ea87d;
+}
+.nav-list .contacto-link.active{
+  color: #1476d9;
+}
+/* Botón de menú hamburguesa */
+.menu-toggle {
+  display: block;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: var(--color-dark);
+  cursor: pointer;
+  z-index: 1001; /* Asegura que el botón esté por encima del menú */
+}
+
+/* Overlay cuando el menú está abierto */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+/* Menú abierto */
+.nav-list.open {
+  left: 0;
+}
+
+.menu-overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+  /* Elimina el menú lateral y muestra los enlaces normalmente */
+  .nav-list {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    left: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav-list ul {
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list a {
+    font-size: 14px;
+    padding: 10px 15px;
+    display: inline-block;
+  }
+
+  /* Oculta el botón hamburguesa en pantallas grandes */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Elimina el overlay en pantallas grandes */
+  .menu-overlay {
+    display: none;
+  }
+}
+</style>
+
+<!-- Script JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const navLinks = document.querySelectorAll('.nav-list a');
+  const currentPath = window.location.pathname;
+
+  // Alternar el menú lateral
+  menuToggle.addEventListener('click', function () {
+    navList.classList.toggle('open');
+    menuOverlay.classList.toggle('open');
+  });
+
+  // Cerrar el menú al hacer clic en el overlay
+  menuOverlay.addEventListener('click', function () {
+    navList.classList.remove('open');
+    menuOverlay.classList.remove('open');
+  });
+
+  // Marcar sección activa
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+

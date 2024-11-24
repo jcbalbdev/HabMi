@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Simplecard from '../../components/Simplecard.astro';
+---
+
+<Layout title="Habitacion Michi">
+	<main>
+    <h2 class="section-title">Habitacion Michi <br> Al Rescate</h2>
+
+    <ul role="list" class="link-card-grid">
+      <Simplecard title='Salem,un gatito cautivador' alt='Tarjeta 1' src='/imgdosauno.svg' href='/rescatados/salem' body='Salem fue rescatado con una pata rota y marcas de una vida difícil en la calle. Ahora, bajo cuidado, enfrenta un camino desafiante con esperanza y valentía. Su historia nos inspira a seguir apoyando a quienes más lo necesitan.'  gradient='var(--gradient-multicolor)'/>
+    
+      <Simplecard title='Copito, un gatito sin cola que encontró la felicidad' alt='Tarjeta 1' src='/imgdosauno.svg' href='/rescatados/copito' body='Rescatado de las calles frías de Lima, Copito dejó atrás el sufrimiento para encontrar el calor de un hogar donde es amado y protegido. '  gradient='var(--gradient-multicolor)'/>
+      
+    
+      <Simplecard title='De Jardín Olvidado a Hogar Soñado: La Segunda Oportunidad de Rosita' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatada del abandono en San Juan de Lurigancho, Rosita superó la desolación y ahora vive rodeada de amor y cuidado en un hogar que siempre soñó.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='Los últimos días de Taylor: Un Amor en Medio del Dolor' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatada del abandono, Taylor enfrentó sus últimos días con amor y cuidado, dejando atrás el sufrimiento de las calles. Su historia es un recordatorio de que cada vida merece dignidad y compasión.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='Tres Patas, Un Corazón Completo, la historia de Naranjita' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Con una pata rota y sin esperanza, Naranjita luchó en las calles hasta encontrar ayuda. Hoy, con tres patas y un corazón lleno de vida, disfruta de un hogar donde reina el amor y la tranquilidad.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='Benito Bodoque: Una Luz de Esperanza' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatado de los cerros de Lima, Benito enfrenta un cáncer avanzado, pero no su lucha solo. Ahora vive rodeado de amor, en un hogar donde cada día es un tributo a su valentía y dignidad.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='El renacer de Mochi: De la Oscuridad al Hogar que Merecía' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Víctima de un cruel maltrato, Mochi enfrentó un camino lleno de desafíos. Con amor y cuidados, superó su pasado y hoy vive feliz en un hogar lleno de cariño y paz.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='El Descanso de Ginger: Una Historia de Amor y Compasión' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatada de los techos de San Martín de Porres, Ginger luchó contra un cáncer avanzado que marcó su vida. Aunque su final llegó pronto, lo hizo rodeada de amor y compasión, libre de dolor.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='Miguelito Un Gatito Rescatado de la Calle' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Abandonado en una caja, Miguelito encontró amor y seguridad. Hoy vive feliz con una familia que lo adora, dejando atrás el abandono para siempre. '  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='La Inspiradora Historia de Licha: Una Gatita que Encontró un Nuevo Comienzo' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatada tras un accidente grave, Licha superó las adversidades con amor y cuidados. Hoy vive feliz en un hogar donde recibe todo el cariño que merece.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='La Inspiradora Historia de Rayito: Un Gatito que Encontró un Nuevo Hogar y Esperanza' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatado del mercado con una grave herida en su ojo, Rayito ahora lucha por una vida plena y sin dolor. Su valentía inspira y su recuperación está llena de esperanza. '  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='La Historia de Don Gato: Un Rescate de Corazón' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatado en su momento más crítico, Don Gato encontró cuidado, amor y dignidad en sus últimos días. Su historia nos recuerda el poder de la compasión y la lucha por quienes más lo necesitan.'  gradient='var(--gradient-multicolor)'/>
+
+      <Simplecard title='Mandarina: Una Luz de Esperanza' alt='Tarjeta 1' src='/imgdosauno.svg' href='#' body='Rescatada del frío con heridas graves, Mandarina enfrenta cada día con valentía y amor. Pronto será sometida a una cirugía que marcará el inicio de una vida llena de bienestar y alegría.'  gradient='var(--gradient-multicolor)'/>
+      
+    
+      
+  </ul>
+  </main>
+</Layout>
+
+<style>
+    main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem; 
+  text-align: center;
+
+  }
+  @media (min-width: 768px) {
+  main {
+    padding: 60px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 80px 40px;
+  }
+}
+  /* Estilo del título */
+.section-title {
+  padding-top:1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  color: #4ea87d ;
+  
+  font-family: "Poppins", sans-serif;
+}
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Grilla actualizada para pantallas más pequeñas */
+.link-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+	gap: 1.5rem;
+	padding: 0;
+}
+
+/* Ajuste de la grilla en pantallas pequeñas */
+@media (max-width: 780px) {
+	.link-card-grid {
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas con tamaños iguales */
+		gap: 1rem;
+	}
+}
+
+/* Ajuste de la grilla en pantallas muy pequeñas */
+@media (max-width: 480px) {
+	.link-card-grid {
+		grid-template-columns: 1fr; /* Una sola columna */
+		gap: 0.5rem;
+	}
+}
+
+/* Ajuste del padding en main para pantallas muy pequeñas */
+@media (max-width: 480px) {
+	main {
+		padding: 1rem 0.5rem; /* Reduce padding horizontal */
+	}
+}
+</style>

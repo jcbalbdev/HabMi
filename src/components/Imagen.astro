@@ -1,0 +1,26 @@
+---
+interface Props {
+  alt:string;
+  src:string;
+}
+
+const {alt,src} = Astro.props;
+---
+
+<div class="image-container">
+  <img src={src} alt={alt} />
+</div>
+
+<style>
+  /* Contenedor de imagen */
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%; /* Hace que la imagen llene toda la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+</style>

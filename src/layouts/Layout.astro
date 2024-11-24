@@ -1,0 +1,79 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<!-- poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<!-- font awesome -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+		<title>{title}</title>
+	</head>
+
+	<body>
+		<Header></Header>
+		<slot />
+		<Footer></Footer>
+	</body>
+
+</html>
+<style is:global>
+	:root {
+    /* --color-dark: #08070b; */
+		--color-dark: #08070b;
+    --color-grey: #8f9ba8;
+    --color-ligth: #fff;
+    --color-cyan :#80ffea;
+    /* --color-green:#8aff80; */
+		--color-green: #4ea87d;
+		--color-pink:#ff80bf;
+		--color-purple:#9580ff;
+		/* --color-yellow:#ffff80; */
+		--color-yellow: #f9cb13;
+    --color-red: #ff9580;
+    --color-orange: #ffca80;
+
+	
+    --gradient-cyan-purple:linear-gradient(135deg, var(--color-purple) 0%, var(--color-cyan) 100%);
+		--gradient-pink-orange:linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+		--gradient-green-yellow:linear-gradient(135deg, var(--color-green) 0%, var(--color-yellow) 100%);
+		--gradient-cyan-green:linear-gradient(135deg, var(--color-cyan) 0%, var(--color-green) 100%);
+		--gradient-multicolor: linear-gradient(135deg, 
+    var(--color-purple) 0%, 
+     
+    var(--color-pink) 50%, 
+     
+    var(--color-yellow) 100%)
+		;
+
+  }
+
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body {
+	font-family: "Poppins", sans-serif;
+  background-color: var(--color-ligth);
+  color: var(--color-ligth);
+	
+	}
+</style>

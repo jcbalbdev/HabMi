@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BannerFull from '../../components/BannerFull.astro';
+import BlqInfoDonacion from '../../components/BlqInfoDonacion.astro';
+
+import Bagde from '../../components/Bagde.astro';
+
+---
+
+<Layout title="Habitacion Michi">
+	<main>
+    <BlqInfoDonacion title='CASO ACTUAL' puno='Donar para ayudar a un gatito gravemente enfermo es una manera directa de salvar una vida y aliviar su sufrimiento.'  pdos='Con tu apoyo, podemos brindarle tratamientos esenciales, darle una segunda oportunidad de vivir en un hogar amoroso y fortalecer los esfuerzos de rescate que marcan la diferencia para muchos más.'  ptres='Tu compasión puede cambiar su destino.'  textBagdeUno='Donar por Paypal' textBagdeDos='Donar por Yape' gradient='var(--color-green)'/>
+    <div class="contact-info">
+      <BannerFull></BannerFull>
+      <h2 class="section-title">Salem, un gatito cautivador</h2>
+      <p class="section-text">Salem fue encontrado hace unos días en la calle, detrás de un contenedor de basura. Estaba solo, con su pata rota y el cuerpo lleno de señales de lo dura que es la vida en la calle. Apenas se movía, agotado por el dolor y la lucha diaria por sobrevivir. La gente pasaba a su lado sin detenerse, como si fuera parte del caos de la ciudad, pero cuando lo vi, supe que no podía dejarlo ahí.
+      </p>
+      <p class="section-text">
+        Ahora Salem está bajo mi cuidado, y aunque su condición es delicada, no se rinde. Tiene infecciones y su pata está en un estado crítico, pero estamos haciendo todo lo posible para salvarlo. Pronto, se le harán los procedimientos necesarios para ver si es posible salvar su pata. Si no, habrá que tomar la difícil decisión de amputarla para darle una oportunidad de seguir viviendo. No es fácil, pero cada día veo en sus ojos una voluntad de pelear, de seguir adelante a pesar de todo lo que ha pasado.
+      <p class="section-text">
+        A pesar del dolor, Salem no deja de ser un luchador. Se adapta, como si entendiera que ahora está en un lugar donde le están dando una oportunidad, quizás la única que ha tenido en su corta vida. No sabemos qué pasará aún, pero lo que sí sé es que está recibiendo el cuidado que tanto necesitaba, y eso ya es un pequeño triunfo en su historia. Su camino no ha terminado, y mientras siga luchando, haremos todo lo que esté en nuestras manos para que Salem tenga la vida que se merece, aunque eso implique que deba enfrentarse a la vida con una pata menos.
+      </p>
+      <div class="suscribete">
+        <a href="/rescatados" class="card__badge">Conoce más Historias</a>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  /* Contenedor Principal (main) */
+  .main-content {
+    width: 100%;
+    
+  }
+  /* Contenedor principal */
+.contact-info {
+  padding: 0;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+}
+.section-title {
+  padding-top:1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  color: #4ea87d ;
+  
+  font-family: "Poppins", sans-serif;
+}
+/* Estilo del texto */
+.section-text {
+  font-size: 1rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+.card__badge {
+    display: inline-block;
+    padding: 0.36rem 0.75rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-light);
+    background: #4ea87d;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-info {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+  </style>
