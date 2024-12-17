@@ -6,15 +6,17 @@ interface Props {
   ptres:string;
   textBagde:string;
   gradient: string;
+  src:string;
+  alt:string;
 }
-const {title,puno,pdos,ptres,textBagde,gradient} = Astro.props;
+const {title,puno,pdos,ptres,textBagde,gradient,src,alt} = Astro.props;
 import Imagen from './Imagen.astro';
 import Bagde from './Bagde.astro';
 --- 
 
 <div class="content-section">
 
-  <Imagen src='/imagen_fondo_f2f2f2.svg' alt='Persona usando un microscopio'/>
+  <Imagen src={src} alt={alt}/>
 
   <div class="text-container">
     <h2 class="section-title">{title}</h2>

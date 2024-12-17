@@ -1,9 +1,14 @@
 ---
-
+interface Props {
+  src:string;
+  alt:string;
+}
+const {src,alt} = Astro.props;
+import Imagen from './Imagen.astro';
 ---
 
 <div class="full-width-image">
-  <img src="/imagen_fondo_f2f2f2.svg" alt="Descripción de la imagen">
+  <Imagen  src={src} alt={alt}/>
 </div>
 
 <style>
