@@ -1,0 +1,114 @@
+---
+
+---
+
+
+<form class="form-container" >
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required />
+  
+    <label for="comment">Comentario:</label>
+    <textarea id="comment" name="comment" rows="4" placeholder="Deja tu comentario" required></textarea>
+  
+    <button type="submit">Enviar</button>
+  </form>
+
+  <style>
+    /* Estilo base */
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      border: 1px solid var(--color-grey);
+      border-radius: 8px;
+      background-color: var(--color-ligth);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .form-container label {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--color-dark);
+    }
+  
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid var(--color-grey);
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+  
+    .form-container input:focus,
+    .form-container textarea:focus {
+      border-color: var(--color-dark);
+    }
+  
+    .form-container button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--color-ligth);
+      background-color: var(--color-green);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .form-container button:hover {
+      background-color: var(--color-dark-green);
+    }
+  
+    /* Estilos para pantallas más pequeñas */
+    @media (max-width: 768px) {
+      .form-container {
+        max-width: 95%;
+        padding: 1rem;
+      }
+  
+      .form-container label {
+        font-size: 0.9rem;
+      }
+  
+      .form-container input,
+      .form-container textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+      }
+  
+      .form-container button {
+        font-size: 0.9rem;
+      }
+    }
+  
+    /* Estilos para pantallas extra pequeñas */
+    @media (max-width: 480px) {
+      .form-container {
+        max-width: 90%;
+        padding: 0.5rem;
+      }
+  
+      .form-container label {
+        font-size: 0.8rem;
+      }
+  
+      .form-container input,
+      .form-container textarea {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+      }
+  
+      .form-container button {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+      }
+    }
+  </style>
+

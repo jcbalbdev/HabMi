@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BannerFull from '../../components/BannerFull.astro';
+import BlqInfoDonacion from '../../components/BlqInfoDonacion.astro';
+import Formulario from '../../components/Formulario.astro';
+import Bagde from '../../components/Bagde.astro';
+
+---
+
+<Layout title="Habitacion Michi">
+	<main>
+    <BlqInfoDonacion src='/PortadaDonaciones.webp' alt='' title='CASO ACTUAL' puno='Donar para ayudar a un gatito gravemente enfermo es una manera directa de salvar una vida y aliviar su sufrimiento.'  pdos='Con tu apoyo, podemos brindarle tratamientos esenciales, darle una segunda oportunidad de vivir en un hogar amoroso y fortalecer los esfuerzos de rescate que marcan la diferencia para muchos más.'  ptres='Tu compasión puede cambiar su destino.'  textBagdeUno='Donar por Paypal' textBagdeDos='Donar por Yape' gradient='var(--color-green)'/>
+    <div class="contact-info">
+      <BannerFull src='/dongato.webp' alt=''></BannerFull>
+      <h2 class="section-title">Copito, un gatito sin cola que encontró la felicidad</h2>
+      <p class="section-text">Había un gatito que vivía en las frías calles de Lima. Lo encontré una tarde lluviosa, hecho una bolita en una caja, todo sucio y cubierto de pulgas. Lo llamé Copito, porque su pelaje blanco, aunque estaba maltratado, me recordó a la nieve. Algo que me sorprendió desde el principio fue que no tenía cola, parecía que había nacido así, lo que lo hacía aún más especial.
+      </p>
+      <p class="section-text">
+        Ese invierno en Lima fue terrible. Llovía casi todos los días y las noches eran particularmente frías. Copito, que no era más que un cachorrito, buscaba refugio en donde podía: una caja vieja, una esquina donde el viento no soplara tanto. El pobre apenas sobrevivía. Cuando lo vi, temblaba de frío y se veía tan frágil que no pude dejarlo ahí. Lo recogí y me lo llevé a casa. Al llegar, lo bañé, lo desparasité y lo envolví en una manta caliente. El pobre se acurrucó y, por primera vez en mucho tiempo, pareció relajarse. Poco a poco, empezó a recuperarse. Cada día se veía más fuerte, más confiado, y empezó a demostrar su personalidad.
+      <p class="section-text">
+        Pero sabía que mi casa solo sería un lugar de paso. Lo que él necesitaba de verdad era un hogar permanente, un lugar donde pudiera sentirse seguro y amado siempre. Después de buscar un tiempo, encontré a la familia perfecta para él. El día que lo conocieron, fue amor a primera vista. Se lo llevaron con ellos, y desde entonces, Copito vive feliz, en un lugar donde no le falta comida, ni cariño, ni un lugar caliente donde dormir. Copito, ese gatito sin cola que alguna vez tuvo que sobrevivir en las calles, ahora tiene una familia que lo cuida y lo ama como se merece. Ya no sufre frío ni hambre, y aunque nunca sabrá lo que es tener una cola, encontró algo mucho mejor: un hogar donde siempre será bienvenido.
+      </p>
+      <div class="suscribete">
+        <a href="/rescatados" class="card__badge">Conoce más Historias</a>
+      </div>
+    </div>
+    <Formulario></Formulario>
+  </main>
+</Layout>
+<style>
+  /* Contenedor Principal (main) */
+  .main-content {
+    width: 100%;
+    
+  }
+  /* Contenedor principal */
+.contact-info {
+  padding: 0;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+}
+.section-title {
+  padding-top:1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  color: #4ea87d ;
+  
+  font-family: "Poppins", sans-serif;
+}
+/* Estilo del texto */
+.section-text {
+  font-size: 1rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+.card__badge {
+    display: inline-block;
+    padding: 0.36rem 0.75rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-light);
+    background: #4ea87d;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-info {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+  </style>
